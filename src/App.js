@@ -10,7 +10,7 @@ function App() {
       </header>
       <main>
         <div>
-          <TaskList title="No Status" />
+          <TaskList title={`No Status`} />
           <TaskList title="Backlog" />
           <TaskList title="In Progress" />
           <TaskList title="Done" />
