@@ -74,4 +74,5 @@ table {
 	flex-wrap: wrap;
 	margin: 32px auto;
 	max-width: 1152px;
+	padding: 0 32px;
 }
