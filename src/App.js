@@ -13,6 +13,8 @@ function App() {
           <TaskList title={`No Status`} />
           <TaskList title={`Backlog`} />
           <TaskList title={`In Progress`} />
+          <TaskList title={`Code Review`} />
+          <TaskList title={`Test`} />
           <TaskList title={`Done`} />
         </div>
       </main>
