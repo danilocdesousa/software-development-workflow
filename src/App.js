@@ -62,12 +62,36 @@ function App() {
       </header>
       <main>
         <div className='workflow'>
-          <TaskList title={`No Status`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
-          <TaskList title={`Backlog`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
-          <TaskList title={`In Progress`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
-          <TaskList title={`Code Review`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
-          <TaskList title={`Test`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
-          <TaskList title={`Done`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
+          <TaskList
+            title={`No Status`}
+            onAddTask={addTask}
+            tasks={tasks.filter((task) => task.state === "No Status")}
+            onTaskUpdate={updateTasks} taskState="No Status" />
+          <TaskList
+            title={`Backlog`}
+            onAddTask={addTask}
+            tasks={tasks.filter((task) => task.state === "Backlog")}
+            onTaskUpdate={updateTasks} taskState="Backlog" />
+          <TaskList
+            title={`In Progress`}
+            onAddTask={addTask}
+            tasks={tasks.filter((task) => task.state === "In Progress")}
+            onTaskUpdate={updateTasks} taskState="In Progress" />
+          <TaskList
+            title={`Code Review`}
+            onAddTask={addTask}
+            tasks={tasks.filter((task) => task.state === "Code Review")}
+            onTaskUpdate={updateTasks} taskState="Code Review" />
+          <TaskList
+            title={`Test`}
+            onAddTask={addTask}
+            tasks={tasks.filter((task) => task.state === "Test")}
+            onTaskUpdate={updateTasks} taskState="Test" />
+          <TaskList
+            title={`Done`}
+            onAddTask={addTask}
+            tasks={tasks.filter((task) => task.state === "Done")}
+            onTaskUpdate={updateTasks} taskState="Done" />
         </div>
       </main>
     </div>
