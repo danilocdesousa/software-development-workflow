@@ -25,10 +25,34 @@ export default function TaskItem({ id, content, taskState, onTaskUpdate }) {
         }
     };
 
+    /* Connect the select to the task state */
+
+    const onTaskStateChange = (e) => {
+        onTaskUpdate(id, content, e.target.value)
+    };
+
+    /* End */
+
     if (isEditing) {
-        return <input type={`text`} value={editableTitle} onChange={onTitleChange} onKeyDown={keyDown} />
+        return <input
+            type={`text`}
+            value={editableTitle}
+            onChange={onTitleChange}
+            onKeyDown={keyDown} />
     } else {
-        return <div onClick={(e) => { return setIsEditing(true) }}>{editableTitle}</div>
+        return (
+            <div>
+                <div onClick={(e) => { return setIsEditing(true) }}>{editableTitle}</div>
+                <select onChange={onTaskStateChange} value={taskState}>
+                    <option value="No Status">No Status</option>
+                    <option value="Backlog">Backlog</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Code Review">Code Review</option>
+                    <option value="Test">Test</option>
+                    <option value="Done">Done</option>
+                </select>
+            </div>
+        );
     }
     /* End */
 }
