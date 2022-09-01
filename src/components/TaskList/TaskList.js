@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./tasklist.css";
 import TaskItem from "../TaskItem/TaskItem";
 
-export default function TaskList({ title, onAddTask, tasks }) {
+export default function TaskList({ title, onAddTask, tasks, onTaskUpdate }) {
 
     /* Call the onAddTask with arguments */
 
@@ -11,13 +11,15 @@ export default function TaskList({ title, onAddTask, tasks }) {
         return onAddTask("New task", "pending");
     };
 
+    /* End */
+
     return (
         <div className="task-list">
             <div className="task-list-title">{title}</div>
             <div className="task-list-content">
                 {tasks.map((task) => {
                     return <TaskItem key={task.id} id={task.id}
-                        content={task.content} taskState={task.state} />
+                        content={task.content} taskState={task.state} onTaskUpdate={onTaskUpdate} />
                 })}
             </div>
             <div>

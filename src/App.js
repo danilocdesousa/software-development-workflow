@@ -10,6 +10,8 @@ const generateId = () => {
   return idAccumulator += 1;
 };
 
+/* End */
+
 function App() {
 
   /* Add new tasks */
@@ -18,19 +20,40 @@ function App() {
   const addTask = (content, state) => {
 
     /* Task structure */
-    
+
     const newTask = {
       id: generateId(),
       content,
       state
     };
 
+    /* End */
+
     /* Add existing tasks to the task list */
-    
+
     setTasks((existingTasks) => {
       return [...existingTasks, newTask];
     });
+
+    /* End */
+
   };
+
+  /* Update the task according to the arguments */
+
+  const updateTasks = (id, title, state) => {
+    setTasks((existingTasks) => {
+      return existingTasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, title, state };
+        } else {
+          return task;
+        }
+      });
+    });
+  };
+
+  /* End */
 
   return (
     <div className="App">
@@ -39,16 +62,19 @@ function App() {
       </header>
       <main>
         <div className='workflow'>
-          <TaskList title={`No Status`} onAddTask={addTask} tasks={tasks} />
-          <TaskList title={`Backlog`} onAddTask={addTask} tasks={tasks} />
-          <TaskList title={`In Progress`} onAddTask={addTask} tasks={tasks} />
-          <TaskList title={`Code Review`} onAddTask={addTask} tasks={tasks} />
-          <TaskList title={`Test`} onAddTask={addTask} tasks={tasks} />
-          <TaskList title={`Done`} onAddTask={addTask} tasks={tasks} />
+          <TaskList title={`No Status`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
+          <TaskList title={`Backlog`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
+          <TaskList title={`In Progress`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
+          <TaskList title={`Code Review`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
+          <TaskList title={`Test`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
+          <TaskList title={`Done`} onAddTask={addTask} tasks={tasks} onTaskUpdate={updateTasks} />
         </div>
       </main>
     </div>
   );
+
+  /* End */
+
 }
 
 export default App;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-export default function TaskItem({ id, content, taskState }) {
+export default function TaskItem({ id, content, taskState, onTaskUpdate }) {
 
     /* Show or edit the task */
 
@@ -13,6 +13,10 @@ export default function TaskItem({ id, content, taskState }) {
 
         const newTitle = e.target.value;
         setEditableTitle(newTitle);
+
+        /* End */
+
+        onTaskUpdate(id, newTitle, taskState);
     };
 
     const keyDown = (e) => {
@@ -26,7 +30,7 @@ export default function TaskItem({ id, content, taskState }) {
     } else {
         return <div onClick={(e) => { return setIsEditing(true) }}>{editableTitle}</div>
     }
-    /* End show or edit the task */
+    /* End */
 }
 
 TaskItem.propTypes = {
