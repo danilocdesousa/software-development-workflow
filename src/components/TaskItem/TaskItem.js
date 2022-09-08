@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-export default function TaskItem({ id, content, taskState, onTaskUpdate }) {
+export default function TaskItem({ id, content, taskState, onTaskUpdate, onDeleteTask }) {
 
     /* Show or edit the task */
 
@@ -22,6 +22,9 @@ export default function TaskItem({ id, content, taskState, onTaskUpdate }) {
     const keyDown = (e) => {
         if (e.key === "Enter") {
             setIsEditing(false);
+            if (editableTitle.length === 0) {
+                onDeleteTask(id);
+            }
         }
     };
 
