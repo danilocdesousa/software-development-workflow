@@ -17,11 +17,15 @@ export default function TaskList({ title, onAddTask, tasks, onTaskUpdate, taskSt
         <div className="task-list">
             <div className="task-list-title">{title}</div>
             <div className="task-list-content">
+
+                {tasks.length === 0 && <div className="empty-list">Empty list</div>}
+
                 {tasks.map((task) => {
                     return <TaskItem key={task.id} id={task.id}
                         content={task.content} taskState={task.state} onTaskUpdate={onTaskUpdate} onDeleteTask={onDeleteTask} />
                 })}
             </div>
+
             <div>
                 <button className="plus-button" onClick={addTask}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-plus-square-fill" viewBox="0 0 16 16">

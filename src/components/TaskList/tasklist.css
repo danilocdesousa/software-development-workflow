@@ -13,7 +13,6 @@
     
 .task-list-content {
     padding: 8px;
-    margin-top: 8px;
     max-height: calc(100% - 93px);
     overflow-x: hidden;
 }
@@ -27,6 +26,7 @@
     align-items: center;
     padding-top: 8px;
     padding-bottom: 8px;
+    margin-top: 8px;
 }
 
 .plus-button:hover {
@@ -35,4 +35,9 @@
 
 .bi-plus-square-fill {
     margin-right: 8px;
+}
+
+.empty-list {
+    color: #424345;
+    margin-top: 8px;
 }
