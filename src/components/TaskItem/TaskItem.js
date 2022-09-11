@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import "./task-item.css";
 
 export default function TaskItem({ id, content, taskState, onTaskUpdate, onDeleteTask }) {
 
@@ -37,16 +38,16 @@ export default function TaskItem({ id, content, taskState, onTaskUpdate, onDelet
     /* End */
 
     if (isEditing) {
-        return <input
+        return <input className="editable-content-input"
             type={`text`}
             value={editableTitle}
             onChange={onTitleChange}
             onKeyDown={keyDown} />
     } else {
         return (
-            <div>
+            <div className="item-content">
                 <div onClick={(e) => { return setIsEditing(true) }}>{editableTitle}</div>
-                <select onChange={onTaskStateChange} value={taskState}>
+                <select className="select-status" onChange={onTaskStateChange} value={taskState}>
                     <option value="No Status">No Status</option>
                     <option value="Backlog">Backlog</option>
                     <option value="In Progress">In Progress</option>

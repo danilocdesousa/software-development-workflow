@@ -1,0 +1,30 @@
+.item-content {
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #232326;
+    border-radius: 4px;
+}
+
+.editable-content-input {
+    width: 100%;
+    background-color: #232326;
+    border: 0;
+    color: #ffc107;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+.select-status {
+    margin-top: 16px;
+    width: 100%;
+    border: 0;
+    background-color: #424345;
+    color: inherit;
+    border-radius: 4px;
+}
+
+.select-status option {
+    color: inherit;
+}
