@@ -2,7 +2,7 @@
     width: calc(100% / 4);
     min-width: 160px;
     border: 1px solid #fff;
-    padding: 8px;
+    padding: 0 8px;
 }
 
 .task-list-title {
@@ -13,6 +13,20 @@
 .task-list-content {
     border: 1px solid #fff;
     padding: 8px;
+}
+
+.plus-button {
+    border: 0;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.282);
+    cursor: pointer;
+    display: inline-flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.bi-plus-lg {
+    margin-right: 8px;
 }
 
 @media (max-width: 768px) {
