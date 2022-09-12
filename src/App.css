@@ -39,9 +39,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-body, html {
-	background-color: #0e0e0e;
-}
 
 ol, ul {
 	list-style: none;
@@ -63,6 +60,11 @@ table {
 }
 
 /* Global Style */
+
+body, html {
+	line-height: 1.5;
+	background-color: #0e0e0e;
+}
 
 .App {
 	font-family: sans-serif;
