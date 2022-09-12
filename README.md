@@ -2,19 +2,21 @@
 
 Projeto de fluxo de trabalho tipo Kanvas baseado no curso React para Iniciantes | Udemy
 
-<p align="center">
-    <a href="#tecnologias">Tecnologias</a> •
-    <a href="#pré-requisitos">Pré-requisitos</a> • 
-    <a href="#instalação">Instalação</a> • 
-    <a href="#utilização">Utilização</a> •
-    <a href="#screenshots">Screenshots</a> •
-    <a href="#status">Status</a> •
-    <a href="#contribuição">Contribuição</a> • 
-    <a href="#licença">Licença</a> • 
-    <a href="#autor">Autor</a>
-</p>
+## Tabela de conteúdo
 
-## Tecnologias utilizadas
+<!--ts-->
+   - [Tecnologias](#tecnologias)
+   - [Pré-requisitos](#pré-requisitos)
+   - [Instalação](#instalação)
+   - [Como usar](#como-usar)
+   - [Screenshots](#screenshots)
+   - [Status](#status)
+   - [Contribuição](#contribuição)
+   - [Autor](#autor)
+   - [Licença](#licença)
+<!--te-->
+ 
+## Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
@@ -37,7 +39,7 @@ No diretório do projeto, você pode executar:
 npm install
 ```
 
-## Utilização
+## Como usar
 
 Para executar o aplicativo, no diretório do projeto, você pode executar:
 
