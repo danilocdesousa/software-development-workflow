@@ -1,3 +1,5 @@
+[![GitHub deployments](https://img.shields.io/github/deployments/danilocdesousa/software-development-workflow/github-pages?style=flat-square)](https://danilocdesousa.github.io/software-development-workflow/)
+
 # Software Development Workflow
 
 Projeto de fluxo de trabalho tipo Kanvas baseado no curso React para Iniciantes | Udemy
