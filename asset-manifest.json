@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/software-development-workflow/static/css/main.9a4ca030.css",
+    "main.js": "/software-development-workflow/static/js/main.5615ca8c.js",
+    "static/js/787.885b4c19.chunk.js": "/software-development-workflow/static/js/787.885b4c19.chunk.js",
+    "index.html": "/software-development-workflow/index.html",
+    "main.9a4ca030.css.map": "/software-development-workflow/static/css/main.9a4ca030.css.map",
+    "main.5615ca8c.js.map": "/software-development-workflow/static/js/main.5615ca8c.js.map",
+    "787.885b4c19.chunk.js.map": "/software-development-workflow/static/js/787.885b4c19.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a4ca030.css",
+    "static/js/main.5615ca8c.js"
+  ]
+}
